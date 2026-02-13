@@ -128,10 +128,10 @@ Use Postman / Browser / Frontend UI to test APIs.
 
 
 👩‍💻 Developed By
-Rakshitha Shetty
-Sahana Priyanka RS
-Sanjana D Kotian
-Sabrina Hehar
+Rakshitha Shetty,
+Sahana Priyanka RS,
+Sanjana D Kotian,
+Sabrina Hehar,
 Major Project — Microservices Architecture
 
 
