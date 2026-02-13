@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #1b1f23;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.home {
+  background: linear-gradient(135deg, #1c1c1e, #1f2428);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../assets/eco-banner.png') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #66ffb2;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #d4d4d4;
+  margin-bottom: 2rem;
+}
+
+/* Core Features Section */
+.features {
+  background-color: #ffffff;
+  padding: 4rem 2rem; /* Reduced top-bottom padding */
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.8rem;
+  color: #121212;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Slightly tighter gaps */
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 1.8rem 1.2rem; /* ✅ Less padding */
+  width: 220px; /* ✅ Smaller card width */
+  height: 340px; /* ✅ Shorter height */
+  backdrop-filter: blur(4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(102, 255, 178, 0.25);
+}
+
+.feature-item svg {
+  font-size: 60px; /* Slightly smaller icon */
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  font-size: 1.4rem;
+  color: #121212;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.5;
+  padding: 0 8px;
+}
+
+/* Why Sustainability Section */
+.why-sustainability {
+  background: linear-gradient(145deg, #23272a, #1c1c1e);
+  padding: 6rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-content {
+  flex: 1;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.why-content h2 {
+  font-size: 2.6rem;
+  color: #66ffb2;
+  margin-bottom: 1.5rem;
+}
+
+.why-content p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  line-height: 1.8;
+}
+
+.why-image {
+  flex: 1;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.why-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Get Started Section */
+.get-started {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.get-started h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #121212;
+}
+
+.get-started p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555555;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #66ffb2, #00e676);
+  color: #121212;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00e676, #66ffb2);
+  box-shadow: 0 4px 15px rgba(0, 230, 118, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #66ffb2;
+  color: #66ffb2;
+}
+
+.btn-secondary:hover {
+  background: #66ffb2;
+  color: #121212;
+}
+
+/* ✨ Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}

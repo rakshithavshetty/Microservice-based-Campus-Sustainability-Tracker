@@ -1,0 +1,55 @@
+.footer {
+  background-color: #1c1f24;
+  /* Dark background */
+  padding: 1.8rem 1.2rem;
+  /* ✅ Slightly generous padding */
+  font-family: 'Outfit', sans-serif;
+  margin-top: 2rem;
+  color: #cccccc;
+  border-top: 1px solid #2b2f34;
+}
+
+.dashboardFooter {
+  background-color: #1c1f24;
+  /* Same dark background for dashboard */
+  padding: 0.6rem 1rem;
+  /* ✅ Thin padding for dashboard */
+  font-family: 'Outfit', sans-serif;
+  margin-top: auto;
+  color: #cccccc;
+  border-top: 1px solid #2b2f34;
+  text-align: center;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  text-align: center;
+}
+
+.footerContent p {
+  font-size: 0.85rem;
+  color: inherit;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footerLinks a {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #66ffb2;
+}

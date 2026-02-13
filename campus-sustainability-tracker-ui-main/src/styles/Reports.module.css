@@ -1,0 +1,63 @@
+.tabContent h2 {
+  color: #388e3c;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: 'Montserrat', 'Roboto Condensed', Arial, sans-serif;
+  font-weight: 600;
+}
+.reportsContainer {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.reportsTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111;
+  text-align: left;
+}
+
+.tabsBar {
+  display: flex;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  border-radius: 12px 12px 0 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.tabBtn:hover {
+  background: #f1f8e9;
+  color: #388e3c;
+}
+
+.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-bottom: 2px solid #2e7d32;
+  font-weight: 700;
+  z-index: 1;
+}
+
+

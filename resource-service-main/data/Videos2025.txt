@@ -1,0 +1,6 @@
+INSERT INTO resource_videos (title, url) VALUES 
+('Sustainable Campus in India', 'https://www.youtube.com/watch?v=eK4k83dZCxY'),
+('Karnataka''s Waste-to-Energy Plant in Bengaluru', 'https://www.youtube.com/watch?v=UcR0uNA0y9g'),
+('University & Sustainable Development Education', 'https://www.youtube.com/watch?v=YQAGqCFz_o8'),
+('Creating a Sustainable Campus', 'https://www.youtube.com/watch?v=qi8TPxGx2K8'),
+('IIT Bombay Campus Sustainability Lab', 'https://www.youtube.com/watch?v=uvRjcujqypI');

@@ -1,0 +1,85 @@
+.navbar {
+  background-color: rgba(18, 18, 18, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Outfit', sans-serif;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  color: #66ffb2; /* ✅ Green logo */
+  font-size: 2.5rem;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff; /* Keep brand white OR change to #66ffb2 if you want */
+  letter-spacing: 0.5px;
+}
+
+.linksArea {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.linksArea a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.linksArea a:hover {
+  color: #66ffb2; /* ✅ Soft green hover */
+}
+
+.linksArea button {
+  background-color: transparent;
+  border: 2px solid #66ffb2; /* ✅ Green border */
+  color: #66ffb2; /* ✅ Green text */
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.linksArea button:hover {
+  background-color: #66ffb2;
+  color: #121212;
+  box-shadow: 0 4px 12px rgba(102, 255, 178, 0.4); /* ✅ Soft glow */
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+}

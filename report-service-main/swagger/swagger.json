@@ -1,0 +1,198 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation for the report service, which tracks carbon emissions, water consumption, energy consumption, and energy generated.",
+    "version": "1.0.0",
+    "title": "Report Service API"
+  },
+  "host": "localhost:5001",
+  "basePath": "/report",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Check if the service is running.",
+        "responses": {
+          "200": {
+            "description": "Service is up and running"
+          }
+        }
+      }
+    },
+    "/carbon-emissions/by-date": {
+      "get": {
+        "summary": "Get all carbon emissions by date",
+        "description": "Retrieve all carbon emissions organized by date (dd-mm-yyyy).",
+        "responses": {
+          "200": {
+            "description": "A list of carbon emissions by date",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CarbonEmission"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/carbon-emissions/by-month": {
+      "get": {
+        "summary": "Get all carbon emissions by month",
+        "description": "Retrieve all carbon emissions grouped by month (mm-yyyy), with totals and averages.",
+        "responses": {
+          "200": {
+            "description": "A list of carbon emissions grouped by month",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CarbonEmissionByMonth"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/water-consumption": {
+      "get": {
+        "summary": "Get all water consumption records",
+        "description": "Retrieve all water consumption records by month.",
+        "responses": {
+          "200": {
+            "description": "A list of water consumption records",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/WaterConsumption"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/energy-consumption": {
+      "get": {
+        "summary": "Get all energy consumption records",
+        "description": "Retrieve all energy consumption records by month.",
+        "responses": {
+          "200": {
+            "description": "A list of energy consumption records",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EnergyConsumption"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/energy-generated": {
+      "get": {
+        "summary": "Get all energy generated records",
+        "description": "Retrieve all energy generated records by month.",
+        "responses": {
+          "200": {
+            "description": "A list of energy generated records",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EnergyGenerated"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CarbonEmission": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "example": "01-01-2024"
+        },
+        "month": {
+          "type": "string",
+          "example": "01-2024"
+        },
+        "noOfVehicles": {
+          "type": "integer",
+          "example": 120
+        }
+      }
+    },
+    "CarbonEmissionByMonth": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "string",
+          "example": "01-2024"
+        },
+        "totalVehicles": {
+          "type": "integer",
+          "example": 3500
+        },
+        "avgVehicles": {
+          "type": "integer",
+          "example": 113
+        },
+        "daysCount": {
+          "type": "integer",
+          "example": 31
+        }
+      }
+    },
+    "WaterConsumption": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "string",
+          "example": "01-2024"
+        },
+        "waterConsumedLitres": {
+          "type": "integer",
+          "example": 2632000
+        }
+      }
+    },
+    "EnergyConsumption": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "string",
+          "example": "01-2024"
+        },
+        "solarEnergy": {
+          "type": "number",
+          "example": 29500
+        },
+        "kebEnergy": {
+          "type": "number",
+          "example": 71000
+        },
+        "totalEnergy": {
+          "type": "number",
+          "example": 100500
+        }
+      }
+    },
+    "EnergyGenerated": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "string",
+          "example": "01-2024"
+        },
+        "solarEnergy": {
+          "type": "number",
+          "example": 72696
+        }
+      }
+    }
+  }
+}

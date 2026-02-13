@@ -1,0 +1,44 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation for the event service.",
+    "version": "1.0.0",
+    "title": "Event Service API"
+  },
+  "host": "localhost:5003",
+  "basePath": "/event",
+  "schemes": ["http"],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "responses": {
+          "200": { "description": "Service is up and running" }
+        }
+      }
+    },
+    "/events": {
+      "get": {
+        "summary": "Get all events",
+        "responses": {
+          "200": {
+            "description": "A list of events",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Event" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Event": {
+      "type": "object",
+      "properties": {
+        "date": { "type": "string", "example": "01-09-2025" },
+        "name": { "type": "string", "example": "Campus Clean-up Drive" }
+      }
+    }
+  }
+}

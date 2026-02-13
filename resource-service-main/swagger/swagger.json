@@ -1,0 +1,120 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation for the resource service.",
+    "version": "1.0.0",
+    "title": "Resource Service API"
+  },
+  "host": "localhost:5005",
+  "basePath": "/resource",
+  "schemes": ["http"],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "responses": {
+          "200": { "description": "Service is up and running" }
+        }
+      }
+    },
+    "/departments": {
+      "get": {
+        "summary": "Get all departments with resource information",
+        "responses": {
+          "200": {
+            "description": "A list of departments with their resources",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Department" }
+            }
+          }
+        }
+      }
+    },
+    "/articles": {
+      "get": {
+        "summary": "Get all sustainability articles",
+        "responses": {
+          "200": {
+            "description": "A list of sustainability articles",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Article" }
+            }
+          }
+        }
+      }
+    },
+    "/research-papers": {
+      "get": {
+        "summary": "Get all sustainability research papers",
+        "responses": {
+          "200": {
+            "description": "A list of sustainability research papers",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/ResearchPaper" }
+            }
+          }
+        }
+      }
+    },
+    "/videos": {
+      "get": {
+        "summary": "Get all sustainability videos",
+        "responses": {
+          "200": {
+            "description": "A list of sustainability videos",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Video" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Department": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "example": 1 },
+        "name": { "type": "string", "example": "CSE" },
+        "classrooms": { "type": "integer", "example": 14 },
+        "labs": { "type": "integer", "example": 10 },
+        "fans": { "type": "integer", "example": 269 },
+        "lights": { "type": "integer", "example": 232 },
+        "computers": { "type": "integer", "example": 402 },
+        "cabins": { "type": "integer", "example": 4 },
+        "airConditioners": { "type": "integer", "example": 0 }
+      }
+    },
+    "Article": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "example": 1 },
+        "title": { "type": "string", "example": "SJEC IGBC Student Chapter Launch" },
+        "url": { "type": "string", "example": "https://www.mangaloretoday.com/main/St-Joseph-Engineering-College-launches-the-Indian-Green-Building-Council-IGBC-Student-Chapter.html" },
+        "category": { "type": "string", "example": "articles" }
+      }
+    },
+    "ResearchPaper": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "example": 1 },
+        "title": { "type": "string", "example": "Strategic Waste Management in Indian University" },
+        "url": { "type": "string", "example": "https://doi.org/10.1108/MEQ-07-2022-0201" },
+        "category": { "type": "string", "example": "research-papers" }
+      }
+    },
+    "Video": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "example": 1 },
+        "title": { "type": "string", "example": "Sustainable Campus in India" },
+        "url": { "type": "string", "example": "https://www.youtube.com/watch?v=eK4k83dZCxY" },
+        "category": { "type": "string", "example": "videos" }
+      }
+    }
+  }
+}

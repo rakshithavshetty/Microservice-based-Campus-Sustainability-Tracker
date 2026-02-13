@@ -1,0 +1,11 @@
+INSERT INTO resource_research_papers (title, url) VALUES 
+('Strategic Waste Management in Indian University', 'https://doi.org/10.1108/MEQ-07-2022-0201'),
+('Campus Sustainability Research Paper (IOP Science)', 'https://iopscience.iop.org/article/10.1088/1755-1315/1084/1/012016/meta'),
+('Sustainability Strategies in Higher Education (PDF)', 'https://savearchive.zbw.eu/bitstream/11159/631353/1/1870674936_0.pdf'),
+('Campus Solar Energy Transition', 'https://onlinelibrary.wiley.com/doi/10.1002/solr.202300498'),
+('Greener Public Parks with AI', 'https://doi.org/10.20900/jsr20250040'),
+('Campus Decarbonization Case', 'https://arxiv.org/html/2311.00809v2'),
+('Campus Energy Transition India', 'https://doi.org/10.3390/su16010087'),
+('Sustainable Strategy in Oil & Gas', 'https://sustainability.hapres.com/htmls/JSR_1795_Detail.html'),
+('Bridging the Green Attitude–Behavior Gap', 'https://sustainability.hapres.com/htmls/JSR_1791_Detail.html'),
+('Sustainable Soil Health Restoration', 'https://doi.org/10.20900/jsr20250056');

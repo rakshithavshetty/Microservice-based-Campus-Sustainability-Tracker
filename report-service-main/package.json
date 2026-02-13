@@ -1,0 +1,24 @@
+{
+  "name": "report-service",
+  "version": "1.0.0",
+  "description": "A service for tracking carbon emissions, water consumption, energy consumption, and energy generated.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.0.0",
+    "eureka-js-client": "^4.5.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}

@@ -1,0 +1,287 @@
+.accountTable {
+    display: block;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    background: #f0fdf4;
+    border-radius: 5px;
+    border: 1px solid #d0f0d7;
+    box-shadow: none;
+    padding: 0px 24px;
+    transition: transform 0.3s ease;
+}
+
+.accountRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    border: none;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    cursor: default;
+    transition: none;
+}
+
+.accountRow:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.accountLabel,
+.accountValue {
+    display: table-cell;
+    padding: 1.1rem 1.2rem 1.1rem 0.7rem;
+    vertical-align: middle;
+    font-size: 1.08rem;
+    background: #66bb6a;
+}
+
+.accountLabel {
+    color: #14532d;
+    font-weight: 700;
+    min-width: 180px;
+    width: 1px;
+    white-space: nowrap;
+    background: transparent;
+    border-radius: 0;
+    font-size: 1.08rem;
+}
+
+.accountValue {
+    color: #14532d;
+    font-weight: 500;
+    background: #f0fdf4;
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 1.2rem;
+    max-width: 420px;
+    word-break: break-word;
+    font-size: 1.08rem;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    /* Remove fixed height/width if present */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 260px;
+    background: #24292e;
+    color: #f0f0f0;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #333;
+}
+
+.profileInfo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profilePic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #66ffb2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.username {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.email {
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+.navLinks ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.navLinks li {
+    margin: 0.6rem 0;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.navLinks li:hover {
+    background: #66ffb214;
+}
+
+.mainContent {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem 2.5rem;
+    min-width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.mainContent h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    color: #1b1f23;
+}
+
+.mainContent p {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+
+
+.greenMessage {
+    margin-top: 1rem;
+    color: #66bb6a;
+    font-weight: 500;
+}
+
+.accountSection {
+    margin-top: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    gap: 0;
+    text-align: left;
+}
+
+.accountSection h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #111;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+}
+
+.accountSection p {
+    margin: 0.7rem 0 0.7rem 0;
+    color: #222;
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    box-shadow: 0 1px 4px rgba(46, 125, 50, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    max-width: 400px;
+    background: #66bb6a;
+}
+
+.accountSection strong {
+    color: #2e7d32;
+    font-weight: 700;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.logoutButton {
+    margin-top: 1.5rem;
+    padding: 10px 28px;
+    background: #14532d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.10);
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    letter-spacing: 0.01em;
+}
+
+.logoutButton:hover {
+    background: #10451d;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.18);
+}
+
+/* Sustainability Fact Styles */
+.factSection {
+    margin-top: 2rem;
+}
+
+.factMainTitle {
+    text-align: center;
+    color: #2e7d32;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.factGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.factCard {
+    background: #f0fdf4;
+    border: 1px solid #d0f0d7;
+    padding: 16px 16px;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.factCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.factTitle {
+    font-size: 1.2rem;
+    color: #1b5e20;
+    margin-bottom: 0.5rem;
+}
+
+.factContent {
+    font-size: 1rem;
+    color: #388e3c;
+}

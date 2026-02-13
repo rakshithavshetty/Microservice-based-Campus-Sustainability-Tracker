@@ -1,0 +1,46 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation for the reward service.",
+    "version": "1.0.0",
+    "title": "Reward Service API"
+  },
+  "host": "localhost:5004",
+  "basePath": "/reward",
+  "schemes": ["http"],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "responses": {
+          "200": { "description": "Service is up and running" }
+        }
+      }
+    },
+    "/rewards": {
+      "get": {
+        "summary": "Get all rewards",
+        "responses": {
+          "200": {
+            "description": "A list of rewards",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/Reward" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Reward": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "example": 1 },
+        "date": { "type": "string", "example": "07-2015" },
+        "title": { "type": "string", "example": "Blue Ocean Strategy Session" },
+        "event": { "type": "string", "example": "Dr Anjali conducted a session on the topic \"Blue Ocean Strategy\"" }
+      }
+    }
+  }
+}
